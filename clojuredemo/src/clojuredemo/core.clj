@@ -14,8 +14,3 @@
 (defn my-first
   [[first]]
   (str "first arg is " first))
-
-(defn sum-numbers
-  "returns sum of two given numbers"
-  [arg1 arg2]
-  (+ arg1 arg1))
