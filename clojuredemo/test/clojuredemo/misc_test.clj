@@ -8,3 +8,8 @@
   (is
    (= '(1 2 3 4)
       (concat [1 2] [3 4]))))
+
+(deftest repeat-test
+  (is
+   (= 10
+      (reduce + (take 10 (repeat 1))))))
