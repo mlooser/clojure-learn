@@ -13,3 +13,8 @@
   (is
    (= 10
       (reduce + (take 10 (repeat 1))))))
+
+(deftest max-test
+  (is (= 3 (max 1 2 3)))
+  (is (= [1 2 3] (max [1 2 3])))
+  )
