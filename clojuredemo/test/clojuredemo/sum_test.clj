@@ -18,3 +18,15 @@
   (is ( = [1 2] ( sum-lists [1 2] [])))
   (is ( = [3 5 1] ( sum-lists [1 2] [2 3 1])))
   )
+
+(defn sum
+  ([vals] (sum vals 0))
+  ([vals result]
+   (if (empty? vals)
+     result
+     (sum (rest vals) (+ result (first vals))))))
+
+(deftest sum-test
+  (is (= 6 (sum [1 2 3])))
+  (is (= 6 (sum '(1 2 3))))
+  (is (= 6 (sum #{1 2 3}))))

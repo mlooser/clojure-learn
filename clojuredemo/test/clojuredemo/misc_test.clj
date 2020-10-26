@@ -16,5 +16,4 @@
 
 (deftest max-test
   (is (= 3 (max 1 2 3)))
-  (is (= [1 2 3] (max [1 2 3])))
-  )
+  (is (= [1 2 3] (max [1 2 3]))))
