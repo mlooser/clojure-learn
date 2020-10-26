@@ -12,3 +12,7 @@
      (cons new-sum (lazy-seq (tri* new-sum (inc n)))))))
 
 (def tri (tri*))
+
+(defn triangular?
+  [n]
+  (= n (last (take-while #(>= n %) tri))))
