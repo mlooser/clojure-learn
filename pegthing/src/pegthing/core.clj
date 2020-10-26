@@ -24,3 +24,13 @@
 (defn row-num
   [pos]
   (inc (count (take-while #(> pos %) tri))))
+
+(defn connect
+  [board max-pos pos neighbor dest]
+  (if (<= dest max-pos)
+    (reduce
+      (fn [new-board [p1 p2]]
+        (assoc-in new-board [p1 :connections p2] neighbor))
+      board
+      [[pos dest] [dest pos]])
+    board))
