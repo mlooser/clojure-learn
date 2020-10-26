@@ -24,7 +24,7 @@
   ([vals result]
    (if (empty? vals)
      result
-     (sum (rest vals) (+ result (first vals))))))
+     (recur (rest vals) (+ result (first vals))))))
 
 (deftest sum-test
   (is (= 6 (sum [1 2 3])))
