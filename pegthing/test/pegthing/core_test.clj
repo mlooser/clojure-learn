@@ -8,3 +8,8 @@
 (deftest triangular?-test
   (is (= false (triangular? 5)))
   (is (= true (triangular? 6))))
+
+(deftest row-tri-test
+  (is (= 1 (row-tri 1)))
+  (is (= 3 (row-tri 2)))
+  (is (= 6 (row-tri 3))))

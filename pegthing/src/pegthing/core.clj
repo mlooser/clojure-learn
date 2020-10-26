@@ -16,3 +16,7 @@
 (defn triangular?
   [n]
   (= n (last (take-while #(>= n %) tri))))
+
+(defn row-tri
+  [n]
+  (last (take n tri)))
