@@ -20,3 +20,7 @@
 (defn row-tri
   [n]
   (last (take n tri)))
+
+(defn row-num
+  [pos]
+  (inc (count (take-while #(> pos %) tri))))

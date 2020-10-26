@@ -13,3 +13,11 @@
   (is (= 1 (row-tri 1)))
   (is (= 3 (row-tri 2)))
   (is (= 6 (row-tri 3))))
+
+(deftest rom-num-test
+  (is (= 1 (row-num 1)))
+  (is (= 2 (row-num 2)))
+  (is (= 2 (row-num 3)))
+  (is (= 3 (row-num 4)))
+  (is (= 3 (row-num 5)))
+  (is (= 3 (row-num 6))))
