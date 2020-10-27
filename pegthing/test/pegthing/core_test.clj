@@ -23,5 +23,14 @@
   (is (= 3 (row-num 6))))
 
 (deftest connect-test
-  (is (= {1 {:connections {4 2}}
-          4 {:connections {1 2}}} (connect {} 15 1 2 4))))
+  (is
+   (=
+    {1 {:connections {4 2}}
+     4 {:connections {1 2}}}
+    (connect {} 15 1 2 4)))
+  (is
+   (=
+    {4 {:connections {1 2}}
+     1 {:connections {4 2}}}
+    (connect-down-left {} 15 1))))
+
