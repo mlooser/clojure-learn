@@ -17,3 +17,6 @@
 (deftest max-test
   (is (= 3 (max 1 2 3)))
   (is (= [1 2 3] (max [1 2 3]))))
+
+(deftest assoc-get-test
+  (is (= 1 (get-in (assoc-in {} [:a :b :c] 1) [:a :b :c]))))
