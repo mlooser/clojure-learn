@@ -34,3 +34,13 @@
      1 {:connections {4 2}}}
     (connect-down-left {} 15 1))))
 
+
+(def test-board (assoc-in (new-board 5) [4 :pegged] false))
+
+(deftest valid-moves-board
+  (is (= {4 2} (valid-moves test-board 1)))
+  (is (= {4 5} (valid-moves test-board 6))))
+
+(deftest valid-move?-test
+  (is (= 2 (valid-move? test-board 1 4)))
+  (is (= 5 (valid-move? test-board 6 4))))
